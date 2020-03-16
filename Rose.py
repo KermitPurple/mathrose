@@ -10,6 +10,7 @@ class Rose:
         self.n = 5
         self.d = 8
         self.scale = size[0]/2 - 20
+        self.mode = 'n'
 
     def k(self):
         return self.n/self.d
@@ -23,4 +24,13 @@ class Rose:
             y = self.scale * r * sin(theta) + self.pos[0]
             points.append((x,y))
         pygame.draw.aalines(self.screen, (255,255,255), True, points)
+
+    def kbin(self, event):
+        if event.unicode == 'n' or event.unicode == 'd':
+            self.mode = str(event.unicode)
+        elif event.unicode >= '1' and event.unicode <= '9':
+            if self.mode == 'n':
+                self.n = int(event.unicode)
+            else:
+                self.d = int(event.unicode)
 
