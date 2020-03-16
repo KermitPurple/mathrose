@@ -33,6 +33,8 @@ class Rose:
                 self.n = int(event.unicode)
             else:
                 self.d = int(event.unicode)
+        elif event.unicode == 'q':
+            return pygame.QUIT
 
     def printcontrols(self):
         print("=" * 75)

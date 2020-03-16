@@ -14,7 +14,8 @@ while running:
         if event.type == pygame.QUIT:
             running = False
         elif event.type == pygame.KEYDOWN:
-            rose.kbin(event)
+            if rose.kbin(event) == pygame.QUIT:
+                running = False
     screen.fill((0,0,0))
     rose.draw()
     pygame.display.update()
