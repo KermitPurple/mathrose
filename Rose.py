@@ -34,3 +34,9 @@ class Rose:
             else:
                 self.d = int(event.unicode)
 
+    def printcontrols(self):
+        print("=" * 75)
+        print("n = select the numerator")
+        print("d = select the denominator")
+        print("1-9 = choose value for selected variable")
+        print("=" * 75)

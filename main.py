@@ -7,6 +7,7 @@ pygame.display.init()
 size = 600,600
 screen = pygame.display.set_mode(size)
 rose = Rose(screen, size)
+rose.printcontrols()
 running = True
 while running:
     for event in pygame.event.get():
